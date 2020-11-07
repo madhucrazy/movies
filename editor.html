@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Realtime editor</title>
+        <script>
+            function refresh(){
+                var textcontent =document.getElementById('editor-textarea').value;
+                document.getElementById('viewer').srcdoc = textcontent;
+     }
+            </script>
+            <style>
+                *{
+                    padding: 0;
+                    margin: 0;
+                    
+                }
+                .main{
+                    background:#ecf0f1 ;
+                   
+                }
+                #editor-textarea{
+                    width: 50%;
+                    height:80%;
+                    border:none;
+                    margin:10px
+                    
+            
+                }
+                #viewer{
+                    background:white ;
+                    border:none;
+                    width: 40%;
+                    height:50%;
+                    margin:10px;
+                
+                }
+
+            </style>
+    </head>
+    <body>
+        <div class="main" >
+            <textarea id ="editor-textarea"></textarea>
+            <iframe id ="viewer"></iframe>
+            <input type ="button" value ="Run" onclick="refresh()"/>
+        </div>
+    </body>
+</html>
